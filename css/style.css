@@ -1,150 +1,108 @@
-/* Reset styling */
+/* Grundläggande reset och stil */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Top bar styling */
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Top-bar styling */
 .top-bar {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centrerar innehållet vertikalt */
-    background-color: #1c3b5a;
-    padding: 10px 20px;
-    color: white;
-}
-
-/* Företagsnamn med Comfortaa-font */
-.company-name {
-    font-family: 'Comfortaa', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: white;
-}
-
-/* Top links styling */
-.top-links {
-    display: flex;
     align-items: center;
+    background-color: #152b48; /* Justerad färg */
+    padding: 10px 20px;
 }
 
-.top-links a {
-    margin-left: 15px;
+.top-bar .company-name {
+    color: white;
+    font-family: 'Comfortaa', sans-serif; /* Comfortaa font */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.top-bar .top-links a {
     color: white;
     text-decoration: none;
+    margin-left: 15px;
 }
 
-.top-links a:hover {
+.top-bar .top-links a:hover {
     text-decoration: underline;
 }
 
 /* Main navigation styling */
 .main-nav {
-    display: flex;
-    align-items: center;
-    background-color: #337ab7;
+    background-color: #006bb3; /* Justerad färg */
     padding: 10px 20px;
-    flex-wrap: wrap;
-}
-
-.menu {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
 }
 
-.menu a {
+.main-nav .menu a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 15px;
 }
 
-.menu a:hover {
+.main-nav .menu a:hover {
     text-decoration: underline;
 }
 
-/* Solutions section styling */
-.solutions {
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
+/* Hero section styling */
+.hero {
+    padding: 40px 20px;
+    max-width: 1200px;
     margin: 0 auto;
+    background-color: #f5f7fa;
 }
 
-.solutions h2 {
-    font-size: 2.5em;
-    color: #1c3b5a; /* Mörkblå färg för rubriken */
-    margin-bottom: 10px;
-}
-
-.solutions .description {
-    font-size: 1.1em;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-/* Card styling */
-.card {
+.hero-columns {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f0f7ff; /* Ljusblå bakgrund */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Skugga runt boxen */
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    gap: 20px;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.column {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px; /* Padding for content */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* Background color for columns */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    position: relative; /* For icon positioning */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align items at the start */
 }
 
-.card-content {
-    padding: 20px;
-}
-
-.card-content h3 {
-    font-size: 1.5em;
-    color: #1c3b5a;
+.column h2 {
+    color: #152b48; /* Text color */
     margin-bottom: 10px;
 }
 
-.card-content p {
-    font-size: 1em;
-    color: #666;
+.column p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-/* Responsiv design för kortet */
-@media (min-width: 768px) {
-    .card {
-        flex-direction: row;
+/* Icon styling */
+.icon {
+    font-size: 28px; /* Increased icon size */
+    color: #006bb3; /* Icon color */
+    margin-top: auto; /* Push icon to the bottom */
+    align-self: flex-start; /* Align icon to the left */
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+    .hero-columns {
+        flex-direction: column;
     }
-
-    .card img {
-        width: 50%;
-    }
-
-    .card-content {
-        width: 50%;
-    }
-}
-
-/* Grundläggande styling för sidan */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-h1 {
-    color: #333;
-}
-
-p {
-    color: #555;
 }
