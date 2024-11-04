@@ -10,10 +10,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1c3b5a; /* Mörkblå färg */
+    background-color: #1c3b5a;
     padding: 10px 20px;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Comfortaa', Arial, sans-serif;
+    flex-wrap: wrap; /* För att bryta raden på mindre skärmar */
+}
+
+/* Företagsnamn längst till vänster i top-baren */
+.company-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 10px; /* För utrymme vid radbrytning på mobil */
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    margin-left: 15px;
 }
 
 .social-icons a {
@@ -23,6 +38,14 @@
 .social-icons img {
     width: 20px;
     height: 20px;
+}
+
+/* Top links styling */
+.top-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
 }
 
 .top-links a {
@@ -39,9 +62,10 @@
 .main-nav {
     display: flex;
     align-items: center;
-    background-color: #337ab7; /* Ljusblå färg */
+    background-color: #337ab7;
     padding: 10px 20px;
-    font-family: Arial, sans-serif;
+    font-family: 'Comfortaa', Arial, sans-serif;
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -49,8 +73,13 @@
     margin-right: 15px;
 }
 
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .menu a {
-    margin-right: 15px;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -62,7 +91,7 @@
 
 /* Grundläggande styling för sidan */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comfortaa', Arial, sans-serif;
     background-color: #f0f0f0;
     padding: 20px;
 }
@@ -73,4 +102,22 @@ h1 {
 
 p {
     color: #555;
+}
+
+/* Responsiv design för mobil */
+@media (max-width: 768px) {
+    .top-bar, .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-links, .menu {
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .company-name {
+        margin-bottom: 10px;
+    }
 }
