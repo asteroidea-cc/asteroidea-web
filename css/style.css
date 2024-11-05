@@ -62,26 +62,23 @@ body {
 }
 
 .column {
+    flex: 1; /* Make all columns equal in width */
     background-color: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    flex: 1; /* This ensures columns take equal space */
 }
 
-/* Adjust right-column to match height with others */
+/* Right columns specific styling */
 .right-column {
-    background-color: #0073e6; /* Blue color */
-    color: white; /* Text color */
-    border-radius: 8px; /* Match border radius */
-    padding: 20px; /* Padding inside the blue box */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow to match other boxes */
+    background-color: #0073e6; /* Blue color for right columns */
+    color: white;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: space-between; /* Space out content evenly */
-    min-height: 100%; /* Ensure it takes up full height */
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* General text and spacing in columns */
 .column h2 {
     color: #152b48;
     font-weight: bold;
@@ -94,13 +91,13 @@ body {
     margin-bottom: 15px;
 }
 
-/* New Info Box styling */
+/* Info Box styling */
 .info-box {
-    background-color: transparent; /* Remove additional blue box */
+    background-color: transparent;
     color: white;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: none; /* Remove shadow for the blue box */
+    box-shadow: none;
     text-align: left;
 }
 
@@ -109,7 +106,7 @@ body {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: white;
-    text-align: center; /* Centrera texten */
+    text-align: center;
 }
 
 .info-box hr {
@@ -126,14 +123,13 @@ body {
 .info-box li {
     font-size: 1.1em;
     margin-bottom: 10px;
-    display: flex; /* Flexbox för att justera ikoner och text */
-    align-items: center; /* Vertikal centrering */
+    display: flex;
+    align-items: center;
 }
 
-/* Ikon stil inom informationsrutan */
 .info-box .material-icons {
-    margin-right: 8px; /* Avstånd mellan ikon och text */
-    color: white; /* Färg på ikonerna */
+    margin-right: 8px;
+    color: white;
 }
 
 /* Secondary Button styling */
@@ -169,33 +165,29 @@ body {
     padding: 12px;
     margin-top: 10px;
     text-align: center;
-    background-color: #ff9800; /* Grundfärg */
+    background-color: #ff9800;
     color: white;
     font-size: 1em;
     font-weight: bold;
-    border: 2px solid transparent; /* Ingen kantlinje */
+    border: 2px solid transparent;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Ökad övergång för border */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: white; /* Färg vid hover */
-    color: #ff9800; /* Textfärg vid hover */
-    border-color: #ff9800; /* Kantlinje vid hover */
+    background-color: white;
+    color: #ff9800;
+    border-color: #ff9800;
 }
 
-/* Responsivitet */
+/* Responsiveness */
 @media (max-width: 768px) {
     .hero-columns {
         flex-direction: column;
     }
 
     .info-box {
-        max-width: 100%;
-    }
-
-    .hero-header {
         max-width: 100%;
     }
 }
