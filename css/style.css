@@ -60,25 +60,28 @@ body {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #f5f7fa;
 }
 
 .hero-columns {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Space between boxes */
 }
 
 .column {
     flex: 1;
-    min-width: 280px;
     padding: 20px; /* Padding for content */
     border-radius: 8px; /* Rounded corners */
     background-color: #ffffff; /* Background color for columns */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
     position: relative; /* For icon positioning */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: flex-start; /* Align items at the start */
+}
+
+.left-column {
+    flex: 1; /* Left column takes default size */
+}
+
+.right-column {
+    flex: 2; /* Right column is twice as wide */
 }
 
 .column h2 {
@@ -94,15 +97,15 @@ body {
 
 /* Icon styling */
 .icon {
-    font-size: 28px; /* Increased icon size */
+    font-size: 36px; /* Increased icon size */
     color: #006bb3; /* Icon color */
-    margin-top: auto; /* Push icon to the bottom */
+    margin-top: 10px; /* Space above icon */
     align-self: flex-start; /* Align icon to the left */
 }
 
 /* Responsivitet */
 @media (max-width: 768px) {
     .hero-columns {
-        flex-direction: column;
+        flex-direction: column; /* Stack columns on smaller screens */
     }
 }
