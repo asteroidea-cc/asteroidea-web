@@ -1,4 +1,4 @@
-/* Grundläggande reset och stil */
+/* Basic styling */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,6 @@ body {
     color: #333;
 }
 
-/* Top-bar styling */
 .top-bar {
     display: flex;
     align-items: center;
@@ -26,7 +25,6 @@ body {
     font-weight: bold;
 }
 
-/* Main navigation styling */
 .main-nav {
     background: linear-gradient(135deg, #005bb5, #0073e6);
     padding: 15px 20px;
@@ -43,11 +41,6 @@ body {
     font-weight: bold;
 }
 
-.main-nav .menu a:hover {
-    text-decoration: underline;
-}
-
-/* Hero section styling */
 .hero {
     padding: 40px 20px;
     max-width: 1200px;
@@ -55,58 +48,68 @@ body {
     background-color: #f5f7fa;
 }
 
+/* Columns layout */
 .hero-columns {
     display: flex;
     gap: 20px;
-    align-items: stretch; /* Ensure all columns stretch to the same height */
+    align-items: stretch; /* Ensures both boxes stretch equally */
 }
 
-.column {
-    flex: 1; /* Make all columns equal in width */
-    background-color: white;
+.left-columns, .right-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.left-column, .right-column {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Right columns specific styling */
-.right-column {
-    background-color: #0073e6; /* Blue color for right columns */
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
-/* General text and spacing in columns */
-.column h2 {
+.left-column {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.left-column h2, .info-box h2 {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
     color: #152b48;
     font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.column p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Info Box styling */
-.info-box {
-    background-color: transparent;
-    color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: none;
-    text-align: left;
 }
 
 .info-box h2 {
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 10px;
     color: white;
     text-align: center;
+}
+
+.left-column p, .info-box p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.right-column {
+    background-color: #0073e6;
+    color: white;
+}
+
+.info-box {
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%; /* Ensures it stretches fully to match the left column */
 }
 
 .info-box hr {
@@ -118,6 +121,7 @@ body {
 .info-box ul {
     list-style: none;
     padding: 0;
+    margin: 0 0 20px;
 }
 
 .info-box li {
@@ -132,25 +136,24 @@ body {
     color: white;
 }
 
-/* Secondary Button styling */
-.secondary-button {
+.secondary-button, .cta-button {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 10px;
     text-align: center;
-    background-color: #0073e6;
-    color: white;
     font-size: 1em;
     font-weight: bold;
-    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.secondary-button:first-of-type {
-    margin-top: 20px;
+.secondary-button {
+    background-color: #0073e6;
+    color: white;
+    border: 2px solid white;
+    margin-bottom: 10px;
 }
 
 .secondary-button:hover {
@@ -158,21 +161,10 @@ body {
     color: #0073e6;
 }
 
-/* CTA Button styling */
 .cta-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    text-align: center;
     background-color: #ff9800;
     color: white;
-    font-size: 1em;
-    font-weight: bold;
     border: 2px solid transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -181,10 +173,14 @@ body {
     border-color: #ff9800;
 }
 
-/* Responsiveness */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-columns {
         flex-direction: column;
+    }
+
+    .left-columns, .right-columns {
+        width: 100%;
     }
 
     .info-box {
