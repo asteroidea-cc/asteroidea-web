@@ -1,10 +1,12 @@
-/* Färger */
+/* Färger och Variabler */
 :root {
-    --primary-color: #0073e6;
+    --primary-color: #2e6fc6;
     --secondary-color: #005bb5;
-    --dark-color: #152b48;
+    --dark-color: #152b48; /* Samma färg som top-baren */
     --white: #ffffff;
     --background-color: #f5f7fa;
+    --section-background-color: #f7f7f7; /* Äggskalsvit bakgrundsfärg */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för sektionerna */
 }
 
 /* Grundinställningar */
@@ -23,7 +25,7 @@ body {
 /* Top-bar */
 .top-bar {
     display: flex;
-    align-items: baseline; /* Justera loggan och texten längs nedre kant */
+    align-items: baseline;
     background-color: var(--dark-color);
     padding: 10px 20px;
     position: fixed;
@@ -35,7 +37,7 @@ body {
 }
 
 .logo {
-    height: 1.2em; /* Justera höjden för att matcha texten */
+    height: 1.2em;
     margin-right: 2.5px;
 }
 
@@ -49,12 +51,14 @@ body {
 
 /* Navigeringsmeny */
 .main-nav {
-    background: linear-gradient(to right, var(--dark-color), var(--primary-color), var(--dark-color));
-    padding: 15px 20px;
-    margin-top: 50px; /* Placering under top-baren */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-color);
+    padding: 20px 20px;
+    margin-top: 50px;
+    height: 62.5px;
+    box-shadow: var(--box-shadow);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .menu a {
@@ -69,14 +73,77 @@ body {
     text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6);
 }
 
+/* Container för sektioner i bredd */
+.section-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Innehållssektioner med skugga och äggskalsvit bakgrund */
+.content-section {
+    flex: 1;
+    padding: 20px;
+    color: #333;
+    background-color: var(--section-background-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Sektion utan blå kant */
+.content-section.no-border {
+    border-left: none;
+}
+
+/* Rubrikstil och spacing för sektioner */
+.content-section h2 {
+    color: var(--dark-color); /* Samma färg som top-baren */
+    font-size: 1.8em;
+    margin-bottom: 15px; /* Snyggt avstånd mellan rubrik och textmassa */
+}
+
+/* Textstil för sektioner med spacing */
+.content-section p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Bildstil för sektioner */
+.section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Lista och ikoner */
+.content-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.content-section li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content-section .material-icons {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
 /* Responsiv design */
 @media (max-width: 768px) {
-    .menu {
+    .section-container {
         flex-direction: column;
-        align-items: center;
     }
 
-    .menu a {
-        margin: 5px 0;
+    .content-section {
+        margin-bottom: 20px;
     }
 }
