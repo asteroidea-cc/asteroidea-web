@@ -1,3 +1,13 @@
+/* Define color variables */
+:root {
+    --primary-color: #0073e6;
+    --secondary-color: #ff9800;
+    --dark-color: #152b48;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
 /* Basic styling */
 * {
     margin: 0;
@@ -7,26 +17,26 @@
 }
 
 body {
-    background-color: #f5f7fa;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .top-bar {
     display: flex;
     align-items: center;
-    background-color: #152b48;
+    background-color: var(--dark-color);
     padding: 10px 20px;
 }
 
 .top-bar .company-name {
-    color: white;
+    color: var(--white);
     font-family: 'Comfortaa', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
 
 .main-nav {
-    background: linear-gradient(135deg, #005bb5, #0073e6);
+    background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
     padding: 15px 20px;
     display: flex;
     justify-content: center;
@@ -35,24 +45,31 @@ body {
 }
 
 .main-nav .menu a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover State for Navigation Links */
+.main-nav .menu a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 .hero {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #f5f7fa;
+    background-color: var(--background-color);
 }
 
 /* Columns layout */
 .hero-columns {
     display: flex;
     gap: 20px;
-    align-items: stretch; /* Ensures both boxes stretch equally */
+    align-items: stretch;
 }
 
 .left-columns, .right-columns {
@@ -73,8 +90,8 @@ body {
 }
 
 .left-column {
-    background-color: #f5f7fa;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .left-column h2, .info-box h2 {
@@ -82,12 +99,12 @@ body {
     display: flex;
     align-items: center;
     margin: 0 0 10px 0;
-    color: #152b48;
+    color: var(--dark-color);
     font-weight: bold;
 }
 
 .info-box h2 {
-    color: white;
+    color: var(--white);
     text-align: center;
 }
 
@@ -98,18 +115,18 @@ body {
 }
 
 .right-column {
-    background-color: #0073e6;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .info-box {
-    color: white;
+    color: var(--white);
     border-radius: 10px;
     text-align: left;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    height: 100%; /* Ensures it stretches fully to match the left column */
+    height: 100%;
 }
 
 .info-box hr {
@@ -133,7 +150,7 @@ body {
 
 .info-box .material-icons {
     margin-right: 8px;
-    color: white;
+    color: var(--white);
 }
 
 .secondary-button, .cta-button {
@@ -146,31 +163,37 @@ body {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .secondary-button {
-    background-color: #0073e6;
-    color: white;
-    border: 2px solid white;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--white);
     margin-bottom: 10px;
 }
 
 .secondary-button:hover {
-    background-color: white;
-    color: #0073e6;
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 
 .cta-button {
-    background-color: #ff9800;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--white);
     border: 2px solid transparent;
 }
 
 .cta-button:hover {
-    background-color: white;
-    color: #ff9800;
-    border-color: #ff9800;
+    background-color: var(--white);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Button Interaction Feedback */
+.secondary-button:active, .cta-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments */
