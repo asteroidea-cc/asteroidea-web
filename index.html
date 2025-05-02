@@ -3,30 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>asteroidea.cc</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-  <link rel="alternate icon" type="image/png" href="images/favicon-96x96.png" />
-
-  <!-- Fonts -->
+  <title>Asteroidea</title>
+  <link rel="icon" href="images/asteroidea logo.svg" type="image/svg+xml" />
+  <meta name="description" content="Personal portfolio and technology lab by Emil Bengtsson. Built for testing, validating, and sharing safety tech tools." />
+  <meta name="author" content="Emil Bengtsson" />
+  <meta name="keywords" content="Asteroidea, safety tech, embedded systems, Arduino, BLE, welfare technology, Emil Bengtsson, assistive tech, alarm systems, digital care" />
+  <meta property="og:title" content="Asteroidea" />
+  <meta property="og:description" content="A portfolio of technical tools and projects built for safety and care technology by Emil Bengtsson." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asteroidea.cc" />
+  <meta property="og:image" content="https://asteroidea.cc/images/asteroidea%20logo.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- SEO Metadata -->
-  <meta name="description" content="Personal portfolio by Emil Bengtsson showcasing hands-on technical projects for connected safety and care systems." />
-  <meta name="author" content="Emil Bengtsson" />
-  <meta property="og:title" content="asteroidea.cc – Emil Bengtsson Portfolio" />
-  <meta property="og:description" content="Technical portfolio of projects built to test and validate safety and care technologies." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/favicon.svg" />
-  <meta property="og:url" content="https://asteroidea.cc" />
-  <meta name="twitter:card" content="summary_large_image" />
 </head>
-
 <body>
 
   <header class="top-bar">
@@ -42,17 +32,10 @@
 
   <main>
     <section id="about">
-      <h1>About</h1>
-      <p>
-        This portfolio serves as both a personal archive and a way to share practical tools developed for testing and validating technology—primarily within connected safety and care systems.
-        The projects are built in response to real-world needs, such as simulating communication flows, isolating components for testing, or evaluating system behavior under controlled conditions.
-      </p>
-      <p>
-        The work is rooted in hands-on experimentation, integration, and iterative problem-solving. More projects will be added over time as new needs arise or when time allows.
-      </p>
-      <p>
-        If you're interested in the source code or want to collaborate, feel free to get in touch. This site is my way of contributing to the community and documenting solutions to common technical challenges.
-      </p>
+      <h1>Emil Bengtsson</h1>
+      <p>This portfolio serves as both a personal archive and a way to share practical tools developed for testing and validating technology—primarily within connected safety and care systems. The projects are built in response to real-world needs, such as simulating communication flows, isolating components for testing, or evaluating system behavior under controlled conditions.</p>
+      <p>The work is rooted in hands-on experimentation, integration, and iterative problem-solving. More projects will be added over time as new needs arise or when time allows.</p>
+      <p>If you're interested in the source code or want to collaborate, feel free to get in touch.</p>
     </section>
 
     <section id="projects">
@@ -62,11 +45,10 @@
         <div>
           <h3>SIA Premises Equipment (PE) Tester</h3>
           <p>
-            A quick and simple tool for simulating and validating SIA-DCS alarm messages over TCP/IP. 
+            A quick and simple tool for simulating and validating SIA-DCS alarm messages over TCP/IP.
             Designed for testing towards cloud-based alarm receivers, the solution provides control over SIA message structure and transmission.
           </p>
-          <strong>Developed for the Arduino R4 WiFi platform</strong><br>
-          <strong>No Encryption Support</strong>
+          <p><strong>Developed for the Arduino R4 WiFi platform</strong><br><strong>No Encryption Support</strong></p>
 
           <details>
             <summary><strong>Key Features</strong></summary>
@@ -100,11 +82,11 @@
             </ul>
           </details>
         </div>
-        
+
         <div>
           <h3>BLE Scanner with Vendor Specific Frame Parsing</h3>
           <p>
-            A versatile BLE scanning tool developed for the Arduino R4 WiFi platform, capable of interpreting Eddystone UID and vendor-specific advertisement frames. 
+            A versatile BLE scanning tool developed for the Arduino R4 WiFi platform, capable of interpreting Eddystone UID and vendor-specific advertisement frames.
             It enables real-time proximity estimation based on RSSI values and delivers structured, readable logging for development and diagnostics.
           </p>
           <p><strong>Developed for the Arduino R4 WiFi platform</strong></p>
