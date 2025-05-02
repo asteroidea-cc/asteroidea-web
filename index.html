@@ -33,41 +33,40 @@
 
         <div>
           <h3>SIA Premises Equipment (PE) Tester for Arduino R4 WiFi</h3>
-          <p>A simple test tool built on Arduino for sending alarm messages using the <strong>SIA-DCS protocol over TCP/IP</strong>.</p>
-          <p><em>
-            This tool is designed for developers and integrators who need to simulate and validate alarm transmissions to cloud-based receivers.  
-            It enables full customization of SIA message fields and provides real-time monitoring and feedback through the Serial interface.
-          </em></p>
+          <p>
+            A custom-built tool for simulating and validating SIA-DCS alarm messages over TCP/IP, developed on the Arduino R4 WiFi platform.<br>
+            Designed for developers and system integrators working with cloud-based alarm receivers, the solution provides full control over SIA message structure and transmission.
+          </p>
 
           <details>
-            <summary><strong>Key Features</strong></summary>
+            <summary><strong>Key Capabilities</strong></summary>
             <ul>
-              <li>Connects to Wi-Fi and resolves the address of a cloud-based alarm platform</li>
-              <li>Allows manual configuration of:
+              <li>Establishes Wi-Fi connectivity and resolves DNS for target alarm servers</li>
+              <li>Supports manual configuration of:
                 <ul>
                   <li>Sequence number</li>
-                  <li>Receiver identifier</li>
+                  <li>Receiver ID</li>
                   <li>Location prefix</li>
                   <li>Account identifier</li>
                 </ul>
               </li>
-              <li>Generates valid SIA-DCS messages including:
+              <li>Constructs compliant SIA-DCS messages with:
                 <ul>
-                  <li>Framing with <code>0x0A</code> and <code>0x0D</code></li>
-                  <li>Payload length in hexadecimal</li>
-                  <li>CRC-16 checksum calculated using a compact implementation</li>
+                  <li>Framing using <code>0x0A</code> and <code>0x0D</code></li>
+                  <li>Hexadecimal payload length</li>
+                  <li>CRC-16 checksum via compact algorithm</li>
                 </ul>
               </li>
-              <li>Sends structured messages over TCP and waits for ACK or NAK responses</li>
-              <li>Provides real-time feedback via the Serial Monitor</li>
+              <li>Sends structured messages over TCP and handles ACK/NAK responses</li>
+              <li>Offers real-time feedback through the Serial Monitor</li>
             </ul>
           </details>
 
           <details>
-            <summary><strong>Code Input Modes</strong></summary>
+            <summary><strong>Input Methods</strong></summary>
             <ul>
-              <li>Direct SIA code entry (e.g. <code>BA</code> for Burglary)</li>
-              <li>Input of <code>classification,alarmcode</code> pairs, mapped to SIA codes using a built-in reference with over 200 predefined alarm types</li>
+              <li>Direct entry of two-character SIA codes (e.g., <code>BA</code> for Burglary)</li>
+              <li>Classification-based entry using <code>classification,alarmcode</code> format, mapped to over 200 predefined alarm types</li>
             </ul>
           </details>
         </div>
