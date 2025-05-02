@@ -151,9 +151,8 @@
   
   /* Expandable sections */
   details {
-    margin-top: 20px;
-    padding: 10px 0;
-    margin-bottom: 12px;
+    margin: 16px 0;
+    padding: 0;
   }
   
   summary {
@@ -161,18 +160,16 @@
     padding-left: 20px;
     font-weight: 600;
     color: var(--dark-color);
-    margin-top: 10px;
-    margin-bottom: 8px;
     cursor: pointer;
-    transition: color 0.2s ease;
     list-style: none;
+    margin: 0;
   }
   
   summary::before {
     content: "▼";
     position: absolute;
     left: 0;
-    top: 0;
+    top: 2px;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
     font-size: 0.8em;
