@@ -1,4 +1,3 @@
-/* Colors and variables */
 :root {
     --primary-color: #2e6fc6;
     --hover-color: #3fd8ba;
@@ -9,7 +8,6 @@
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
   
-  /* Base settings */
   * {
     margin: 0;
     padding: 0;
@@ -128,7 +126,8 @@
   .project-note {
     font-weight: bold;
     color: #444;
-    margin-bottom: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
   
   /* Lists */
@@ -148,7 +147,7 @@
     margin-bottom: 8px;
   }
   
-  /* Projects in vertical layout */
+  /* Projects */
   .project-grid {
     display: flex;
     flex-direction: column;
@@ -164,7 +163,8 @@
   
   /* Expandable sections */
   details {
-    margin: 16px 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
     padding: 0;
   }
   
@@ -193,7 +193,6 @@
     transform: rotate(180deg);
   }
   
-  /* Hide default triangle in WebKit browsers */
   summary::-webkit-details-marker {
     display: none;
   }
@@ -217,7 +216,7 @@
     font-size: 0.9em;
   }
   
-  /* Responsive adjustments */
+  /* Responsive */
   @media (max-width: 768px) {
     nav {
       flex-wrap: wrap;
