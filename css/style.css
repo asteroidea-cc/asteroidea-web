@@ -113,6 +113,11 @@
     font-weight: 600;
   }
   
+  /* Paragraph spacing */
+  p {
+    margin-bottom: 12px;
+  }
+  
   /* Lists */
   ul {
     margin-top: 10px;
@@ -130,12 +135,7 @@
     margin-bottom: 8px;
   }
   
-  /* Paragraph spacing */
-  p {
-    margin-bottom: 12px;
-  }
-  
-  /* Project layout: now vertical */
+  /* Project layout – vertical list */
   .project-grid {
     display: flex;
     flex-direction: column;
@@ -147,6 +147,37 @@
     padding: 20px;
     border-radius: 6px;
     box-shadow: var(--box-shadow);
+  }
+  
+  /* Expandable sections with rotating icon */
+  details {
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  
+  summary {
+    position: relative;
+    padding-left: 20px;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  summary::before {
+    content: "▼";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+    font-size: 0.8em;
+    color: var(--primary-color);
+  }
+  
+  details[open] summary::before {
+    transform: rotate(180deg);
   }
   
   /* Links */

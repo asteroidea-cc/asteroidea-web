@@ -42,51 +42,59 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="project-grid">
+
         <div>
-          <h3>SIA Premises Equipment (PE) Tester for Arduino R4 Wifi</h3>
+          <h3>SIA Premises Equipment (PE) Tester for Arduino R4 WiFi</h3>
           <p>A simple test tool built on Arduino for sending alarm messages using the <strong>SIA-DCS protocol over TCP/IP</strong>.</p>
 
-          <h4>Features</h4>
-          <ul>
-            <li>Connects to Wi-Fi and resolves the address of a cloud-based alarm platform</li>
-            <li>Allows manual configuration of:
-              <ul>
-                <li>Sequence number</li>
-                <li>Receiver identifier</li>
-                <li>Location prefix</li>
-                <li>Account identifier</li>
-              </ul>
-            </li>
-            <li>Generates valid SIA-DCS messages including:
-              <ul>
-                <li>Framing with <code>0x0A</code> and <code>0x0D</code></li>
-                <li>Payload length in hexadecimal</li>
-                <li>CRC-16 checksum calculated using a compact implementation</li>
-              </ul>
-            </li>
-            <li>Sends structured messages over TCP and waits for ACK or NAK responses</li>
-            <li>Provides real-time feedback via the Serial Monitor</li>
-          </ul>
+          <details>
+            <summary><strong>Key Features</strong></summary>
+            <ul>
+              <li>Connects to Wi-Fi and resolves the address of a cloud-based alarm platform</li>
+              <li>Allows manual configuration of:
+                <ul>
+                  <li>Sequence number</li>
+                  <li>Receiver identifier</li>
+                  <li>Location prefix</li>
+                  <li>Account identifier</li>
+                </ul>
+              </li>
+              <li>Generates valid SIA-DCS messages including:
+                <ul>
+                  <li>Framing with <code>0x0A</code> and <code>0x0D</code></li>
+                  <li>Payload length in hexadecimal</li>
+                  <li>CRC-16 checksum calculated using a compact implementation</li>
+                </ul>
+              </li>
+              <li>Sends structured messages over TCP and waits for ACK or NAK responses</li>
+              <li>Provides real-time feedback via the Serial Monitor</li>
+            </ul>
+          </details>
 
-          <h4>Code Input Modes</h4>
-          <ul>
-            <li>Direct SIA code entry (e.g. <code>BA</code> for Burglary)</li>
-            <li>Input of <code>classification,alarmcode</code> pairs, mapped to SIA codes using a built-in reference with over 200 predefined alarm types</li>
-          </ul>
+          <details>
+            <summary><strong>Code Input Modes</strong></summary>
+            <ul>
+              <li>Direct SIA code entry (e.g. <code>BA</code> for Burglary)</li>
+              <li>Input of <code>classification,alarmcode</code> pairs, mapped to SIA codes using a built-in reference with over 200 predefined alarm types</li>
+            </ul>
+          </details>
         </div>
 
         <div>
           <h3>Eddystone Receiver</h3>
           <p>Browser-based alarm reception using the Eddystone protocol.</p>
         </div>
+
         <div>
           <h3>Cloud Integration</h3>
           <p>Safety alarm integrations for municipalities.</p>
         </div>
+
         <div>
           <h3>IoT Monitoring</h3>
           <p>System monitoring with Zabbix for distributed devices.</p>
         </div>
+
       </div>
     </section>
 
