@@ -1,32 +1,31 @@
-/* Färger och Variabler */
+/* Colors and Variables */
 :root {
     --primary-color: #2e6fc6;
-    --secondary-color: #005bb5;
     --hover-color: #3fd8ba;
     --dark-color: #152b48;
     --white: #ffffff;
-    --background-color: #f5f7fa;
-    --section-background-color: #f7f7f7;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Grundinställningar */
-* {
+    --background-color: #f9f9f9;
+    --section-background-color: #ffffff;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Base settings */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-}
-
-body {
+  }
+  
+  body {
     background-color: var(--background-color);
-    color: #333;
+    color: #222;
     line-height: 1.6;
-    padding-top: 110px; /* Top-bar + Nav */
-}
-
-/* Top-bar */
-.top-bar {
+    padding-top: 120px;
+  }
+  
+  /* Top bar */
+  .top-bar {
     display: flex;
     align-items: center;
     background-color: var(--dark-color);
@@ -37,91 +36,129 @@ body {
     width: 100%;
     height: 50px;
     z-index: 1000;
-}
-
-.logo {
+  }
+  
+  .logo {
     height: 1.5em;
     margin-right: 10px;
-}
-
-.company-name {
+  }
+  
+  .company-name {
     color: var(--white);
     font-family: 'Comfortaa', sans-serif;
     font-size: 20px;
     font-weight: bold;
-}
-
-/* Navigation */
-.main-nav {
+  }
+  
+  /* Navigation */
+  nav {
     background-color: var(--primary-color);
-    padding: 15px 0;
-    text-align: center;
     position: fixed;
     top: 50px;
-    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
     z-index: 999;
-}
-
-.menu a {
+  }
+  
+  nav a {
     color: var(--white);
     text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1em;
     transition: color 0.3s ease;
-}
-
-.menu a:hover {
+  }
+  
+  nav a:hover {
     color: var(--hover-color);
-    text-shadow: none;
-}
-
-/* Sektioner staplade i höjdled */
-.section-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 0 auto;
+  }
+  
+  /* Main content */
+  main {
+    max-width: 900px;
+    margin: auto;
     padding: 40px 20px;
-}
-
-/* Varje sektion */
-.content-section {
-    padding: 80px 0;
+  }
+  
+  /* Section layout */
+  section {
     background-color: var(--section-background-color);
-    border-bottom: 1px solid #e0e0e0;
-}
-
-/* Rubriker */
-.content-section h2 {
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Headings */
+  h1, h2 {
+    margin-bottom: 20px;
     color: var(--dark-color);
-    font-size: 2em;
-    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+  }
+  
+  /* Lists */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Projects layout */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-grid div {
+    background-color: #f1f4f7;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Footer */
+  footer {
     text-align: center;
-}
-
-/* Text och listor */
-.content-section p, 
-.content-section ul {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.content-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
-}
-
-/* Responsiv design */
-@media (max-width: 768px) {
-    .menu a {
-        margin: 0 10px;
-        font-size: 1em;
+    padding: 30px 10px;
+    background-color: var(--dark-color);
+    color: var(--white);
+    font-size: 0.9em;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+      gap: 10px;
     }
-
-    .content-section {
-        padding: 60px 0;
+  
+    section {
+      padding: 20px;
     }
-}
+  
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
