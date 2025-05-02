@@ -1,3 +1,4 @@
+/* Colors and variables */
 :root {
     --primary-color: #2e6fc6;
     --hover-color: #3fd8ba;
@@ -8,6 +9,7 @@
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   }
   
+  /* Base settings */
   * {
     margin: 0;
     padding: 0;
@@ -103,51 +105,12 @@
     font-size: 1.2em;
   }
   
-  h4 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 1.05em;
-    color: var(--dark-color);
-    font-weight: 600;
-  }
-  
-  /* Paragraph spacing */
+  /* Paragraphs */
   p {
     margin-bottom: 16px;
   }
   
-  .project-grid div > p {
-    max-width: 700px;
-    line-height: 1.7;
-    margin-bottom: 16px;
-  }
-  
-  /* Project notes with consistent spacing */
-  .project-note {
-    font-weight: bold;
-    color: #444;
-    margin-top: 0;
-    margin-bottom: 16px;
-  }
-  
-  /* Lists */
-  ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    list-style-type: disc;
-  }
-  
-  ul ul {
-    margin-top: 5px;
-    padding-left: 20px;
-    list-style-type: circle;
-  }
-  
-  ul li {
-    margin-bottom: 8px;
-  }
-  
-  /* Projects */
+  /* Project grid */
   .project-grid {
     display: flex;
     flex-direction: column;
@@ -161,9 +124,28 @@
     box-shadow: var(--box-shadow);
   }
   
+  /* Lists */
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  ul ul {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  ul li {
+    margin-bottom: 6px;
+  }
+  
   /* Expandable sections */
   details {
-    margin: 8px 0;
+    margin: 16px 0;
     padding: 0;
   }
   
@@ -192,6 +174,7 @@
     transform: rotate(180deg);
   }
   
+  /* Hide default triangle in WebKit browsers */
   summary::-webkit-details-marker {
     display: none;
   }
@@ -215,7 +198,7 @@
     font-size: 0.9em;
   }
   
-  /* Responsive */
+  /* Responsive adjustments */
   @media (max-width: 768px) {
     nav {
       flex-wrap: wrap;
