@@ -118,10 +118,16 @@
     margin-bottom: 16px;
   }
   
-  /* Project paragraph fix */
   .project-grid div > p {
     max-width: 700px;
     line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  
+  /* Project notes */
+  .project-note {
+    font-weight: bold;
+    color: #444;
     margin-bottom: 16px;
   }
   
