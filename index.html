@@ -5,133 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>asteroidea.cc</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary-color: #2e6fc6;
-      --hover-color: #3fd8ba;
-      --dark-color: #152b48;
-      --white: #ffffff;
-      --bg: #f9f9f9;
-      --shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: var(--bg);
-      color: #222;
-      padding-top: 120px;
-      line-height: 1.6;
-    }
-
-    .top-bar {
-      background: var(--dark-color);
-      color: var(--white);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      font-weight: bold;
-      font-size: 1.2em;
-      z-index: 1000;
-    }
-
-    nav {
-      background: var(--primary-color);
-      position: fixed;
-      top: 50px;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px;
-      z-index: 999;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: var(--hover-color);
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-
-    h1, h2 {
-      margin-bottom: 20px;
-      color: var(--dark-color);
-    }
-
-    h3 {
-      margin-bottom: 5px;
-      color: var(--primary-color);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .project-grid div {
-      background: #f1f4f7;
-      padding: 20px;
-      border-radius: 6px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    a {
-      color: var(--primary-color);
-    }
-
-    a:hover {
-      color: var(--hover-color);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <div class="top-bar">✶ asteroidea</div>
+  <header class="top-bar">
+    <img src="images/asteroidea logo.svg" alt="Asteroidea logo" class="logo" />
+    <span class="company-name">asteroidea</span>
+  </header>
 
   <nav>
     <a href="#about">About</a>
@@ -143,7 +25,10 @@
   <main>
     <section id="about">
       <h1>Hi, I'm Emil Bengtsson</h1>
-      <p>I work at the intersection of technology and care. With 10+ years of experience in welfare technology, I focus on building scalable and impactful solutions in health and social care.</p>
+      <p>
+        I work at the intersection of technology and care. With 10+ years of experience in welfare technology,
+        I focus on building scalable and impactful solutions in health and social care.
+      </p>
     </section>
 
     <section id="experience">
@@ -182,13 +67,14 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:you@exande.com">you@exande.com</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+      <p><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Emil Bengtsson · asteroidea.cc
   </footer>
+
 </body>
 </html>
