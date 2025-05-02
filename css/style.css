@@ -122,12 +122,12 @@
     margin-bottom: 16px;
   }
   
-  /* Project notes */
+  /* Project notes with consistent spacing */
   .project-note {
     font-weight: bold;
     color: #444;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 16px;
   }
   
   /* Lists */
@@ -163,8 +163,7 @@
   
   /* Expandable sections */
   details {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 16px 0;
     padding: 0;
   }
   
