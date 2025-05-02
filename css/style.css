@@ -76,14 +76,14 @@
     color: var(--hover-color);
   }
   
-  /* Main content layout */
+  /* Main layout */
   main {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
   }
   
-  /* Section styling */
+  /* Sections */
   section {
     background-color: var(--section-background-color);
     padding: 40px;
@@ -135,7 +135,7 @@
     margin-bottom: 8px;
   }
   
-  /* Project layout – vertical list */
+  /* Projects in vertical layout */
   .project-grid {
     display: flex;
     flex-direction: column;
@@ -149,7 +149,7 @@
     box-shadow: var(--box-shadow);
   }
   
-  /* Expandable sections with rotating icon */
+  /* Expandable sections */
   details {
     margin-top: 20px;
     padding: 10px 0;
@@ -163,6 +163,7 @@
     margin-bottom: 10px;
     cursor: pointer;
     transition: color 0.2s ease;
+    list-style: none;
   }
   
   summary::before {
@@ -178,6 +179,11 @@
   
   details[open] summary::before {
     transform: rotate(180deg);
+  }
+  
+  /* Hide default triangle in WebKit browsers */
+  summary::-webkit-details-marker {
+    display: none;
   }
   
   /* Links */
@@ -199,7 +205,7 @@
     font-size: 0.9em;
   }
   
-  /* Responsive design */
+  /* Responsive adjustments */
   @media (max-width: 768px) {
     nav {
       flex-wrap: wrap;
