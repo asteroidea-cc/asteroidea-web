@@ -118,7 +118,8 @@
     margin-bottom: 16px;
   }
   
-  .project-grid div p {
+  /* Project paragraph fix */
+  .project-grid div > p {
     max-width: 700px;
     line-height: 1.7;
     margin-bottom: 16px;
@@ -225,7 +226,7 @@
       padding: 20px;
     }
   
-    .project-grid div p {
+    .project-grid div > p {
       max-width: 100%;
     }
   }
