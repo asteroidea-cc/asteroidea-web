@@ -106,8 +106,30 @@
         </div>
 
         <div>
-          <h3>Eddystone Receiver</h3>
-          <p>Browser-based alarm reception using the Eddystone protocol.</p>
+          <h3>BLE Scanner with Developer Frame Parsing</h3>
+          <p>
+            An extended scanner built on the Arduino R4 WiFi platform for interpreting BLE advertisements from Eddystone UID and Minew Info frames.
+            This project provides real-time distance estimation based on RSSI values and supports structured logging for device identification and diagnostics.
+          </p>
+          <p><strong>Developed for the Arduino R4 WiFi platform</strong></p>
+          <p><strong>No Encryption Support</strong></p>
+
+          <details>
+            <summary><strong>Key Features</strong></summary>
+            <ul>
+              <li>Continuous BLE scanning using the <code>ArduinoBLE</code> library</li>
+              <li>Detection and parsing of Eddystone UID frames and Minew-specific Info frames</li>
+              <li>Extraction of Namespace ID and Instance ID from Eddystone frames</li>
+              <li>Extraction of MAC address and device name from Minew frames</li>
+              <li>Consistent signal strength logging using RSSI values</li>
+              <li>Distance estimation based on RSSI and TX Power, calibrated per beacon type</li>
+              <li>Formatted and readable log output for easier diagnostics</li>
+              <li>Extended support for developer-specific frames, including Minew Info structures</li>
+              <li>Improved distance estimation logic with calibrated TX power for more accurate proximity readings</li>
+              <li>Consistent and unified logging format across different beacon types</li>
+              <li>Optimized Serial output for clearer diagnostics and easier debugging</li>
+            </ul>
+          </details>
         </div>
 
         <div>
