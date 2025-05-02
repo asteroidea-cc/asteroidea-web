@@ -76,8 +76,8 @@
         <div>
           <h3>BLE Scanner with Vendor Specific Frame Parsing</h3>
           <p>
-            An extended scanner built for interpreting BLE advertisements from Eddystone UID and Vendor Specific info frames.
-            This project provides real-time distance estimation based on RSSI values and supports structured logging for device identification and diagnostics.
+            A versatile BLE scanning tool developed for the Arduino R4 WiFi platform, capable of interpreting Eddystone UID and vendor-specific advertisement frames. 
+            It enables real-time proximity estimation based on RSSI values and delivers structured, readable logging for development and diagnostics.
           </p>
           <p><strong>Developed for the Arduino R4 WiFi platform</strong></p>
 
@@ -95,6 +95,15 @@
               <li>Improved distance estimation logic with calibrated TX power for more accurate proximity readings</li>
               <li>Consistent and unified logging format across different beacon types</li>
               <li>Optimized Serial output for clearer diagnostics and easier debugging</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Input Methods</strong></summary>
+            <ul>
+              <li>Hardcoded MAC address filtering for targeted beacon recognition</li>
+              <li>Predefined byte arrays for matching specific Instance IDs</li>
+              <li>Automatic parsing of Eddystone UID and Minew formats without user input</li>
             </ul>
           </details>
         </div>
