@@ -1,86 +1,194 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>asteroidea.cc</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>asteroidea.cc</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #2e6fc6;
+      --hover-color: #3fd8ba;
+      --dark-color: #152b48;
+      --white: #ffffff;
+      --bg: #f9f9f9;
+      --shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: #222;
+      padding-top: 120px;
+      line-height: 1.6;
+    }
+
+    .top-bar {
+      background: var(--dark-color);
+      color: var(--white);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+      z-index: 1000;
+    }
+
+    nav {
+      background: var(--primary-color);
+      position: fixed;
+      top: 50px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+      z-index: 999;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--hover-color);
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      color: var(--dark-color);
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      color: var(--primary-color);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-grid div {
+      background: #f1f4f7;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    a {
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      color: var(--hover-color);
+    }
+  </style>
 </head>
 <body>
-    <!-- Top bar -->
-    <div class="top-bar">
-        <img src="images/asteroidea logo.svg" alt="asteroidea logo" class="logo">
-        <span class="company-name">asteroidea</span>
-    </div>
 
-    <!-- Main navigation -->
-    <nav class="main-nav">
-        <div class="menu">
-            <a href="#">Emil Bengtsson</a>
-            <a href="#">About</a>
-            <a href="#">Experience</a>
-            <a href="#">Small Projects</a>
-            <a href="#">Contact</a>
+  <div class="top-bar">✶ asteroidea</div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h1>Hi, I'm Emil Bengtsson</h1>
+      <p>I work at the intersection of technology and care. With 10+ years of experience in welfare technology, I focus on building scalable and impactful solutions in health and social care.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Client Manager</strong> – Health & Social Care (2024–)</li>
+        <li><strong>Product Manager</strong> – Digital Safety Solutions (2023–2024)</li>
+        <li><strong>Distributor Support Lead</strong> – Northern Europe (2017–2023)</li>
+        <li><strong>Service Coordinator</strong> – International Projects (2015–2017)</li>
+        <li><strong>Service Technician</strong> – Aftermarket Support (2013–2014)</li>
+        <li><strong>Production Technician</strong> – Welfare Technology (2010–2012)</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div>
+          <h3>Local Alarm System</h3>
+          <p>Bluetooth Mesh-based alarm system for LSS housing</p>
         </div>
-    </nav>
+        <div>
+          <h3>Eddystone Alarm Receiver</h3>
+          <p>Web-based alarm reception using Eddystone protocol</p>
+        </div>
+        <div>
+          <h3>Cloud Alarm Integration</h3>
+          <p>Municipal safety alarm integration projects</p>
+        </div>
+        <div>
+          <h3>IoT Monitoring</h3>
+          <p>Zabbix monitoring solutions for distributed sensors</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- Sections -->
-    <div class="section-container">
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:you@exande.com">you@exande.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+    </section>
+  </main>
 
-        <!-- Profile -->
-        <section class="content-section" id="profile">
-            <h2>Profile</h2>
-            <p>
-                Health and social sector technology professional.<br>
-                Problem solver. Technical specialist. Passionate about technology-enabled care.
-            </p>
-        </section>
-
-        <!-- About -->
-        <section class="content-section" id="about">
-            <h2>About</h2>
-            <p>
-                With over a decade of experience in health and social care technology, I combine technical expertise with strong communication skills to find creative solutions that add real value.
-                Passionate about helping organizations evolve and adapt through technology-enabled care.
-            </p>
-        </section>
-
-        <!-- Experience -->
-        <section class="content-section" id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li>Client Manager – Health and Social Care Sector (2024–)</li>
-                <li>Product Manager – Digital Safety Solutions (2023–2024)</li>
-                <li>Distributor Support Lead – Northern Europe (2017–2023)</li>
-                <li>Service Coordinator – International Projects (2015–2017)</li>
-                <li>Service Technician – Aftermarket Support (2013–2014)</li>
-                <li>Production Technician – Welfare Technology (2010–2012)</li>
-            </ul>
-        </section>
-
-        <!-- Projects -->
-        <section class="content-section" id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Bluetooth Mesh-based local alarm systems for residential care.</li>
-                <li>Web-based alarm reception using Eddystone protocol.</li>
-                <li>Cloud-based safety alarm integrations for municipalities.</li>
-                <li>System monitoring through Zabbix for IoT deployments.</li>
-            </ul>
-        </section>
-
-        <!-- Contact -->
-        <section class="content-section" id="contact">
-            <h2>Contact</h2>
-            <p>
-                Email: <a href="#">your.email@example.com</a><br>
-                GitHub: <a href="#" target="_blank">github.com/yourusername</a>
-            </p>
-        </section>
-
-    </div>
-
+  <footer>
+    &copy; 2025 Emil Bengtsson · asteroidea.cc
+  </footer>
 </body>
 </html>
